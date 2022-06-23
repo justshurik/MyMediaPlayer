@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements ISetRating, IDele
                 Toast.makeText(this,"Доступ к хранилищу не разрешен.", Toast.LENGTH_SHORT).show();
 
             }else{
-                Toast.makeText(this,"Проверьте настройки.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Проверьте настройки аудиозаписей.", Toast.LENGTH_SHORT).show();
             }
         }
     }
