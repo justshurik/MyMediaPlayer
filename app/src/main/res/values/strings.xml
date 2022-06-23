@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MyMediaPlayer</string>
+    <string name="rate_sort">по рейтингу</string>
+    <string name="name_sort">по названию</string>
+    <string name="artist_sort">по исполнителю</string>
+    <string name="date_sort">по дате изменения</string>
+    <string name="title_size">Размер аудио-файла от</string>
+    <string name="params_search">Параметры поиска аудиофайлов</string>
+    <string name="title_button_save">Сохранить параметры поиска</string>
+    <string name="title_button_add">Добавить аудиофайл</string>
+    <string name="title_sort_params">Параметры сортировки аудиофайлов</string>
+    <string name="Mb">Мб</string>
+    <string name="until">до</string>
+    <string name="none">нет</string>
+    <string name="loading">Загрузка</string>
+    <string name="title_list_audio">Список композиций</string>
+    <string name="settings_title">Настройки поиска композиций</string>
+    <string name="deleted_title">Мусорная корзина</string>
+
+    <string-array name="popup">
+        <item>Восстановить</item>
+        <item>Удалить из Корзины</item>
+    </string-array>
+
+</resources>

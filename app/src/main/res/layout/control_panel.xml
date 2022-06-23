@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/control_panel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/skip_previous"
+        android:id="@+id/btn_skip_previous"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/btn_skip_previous"
+        app:layout_constraintStart_toEndOf="@id/btn_skip_previous"
+        android:layout_width="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_height="36dp"
+        android:src="@drawable/stop"
+        android:id="@+id/btn_stop"/>
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/btn_skip_previous"
+        app:layout_constraintStart_toEndOf="@id/btn_stop"
+        android:layout_width="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_height="36dp"
+        android:src="@drawable/play"
+        android:id="@+id/btn_play"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/btn_skip_previous"
+        app:layout_constraintStart_toEndOf="@id/btn_play"
+        android:layout_width="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_height="36dp"
+        android:visibility="gone"
+        android:src="@drawable/pause"
+        android:id="@+id/btn_pause"/>
+
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/btn_skip_previous"
+        app:layout_constraintStart_toEndOf="@id/btn_pause"
+        android:layout_width="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_height="36dp"
+        android:src="@drawable/skip_next"
+        android:id="@+id/btn_skip_next"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/btn_skip_previous"
+        app:layout_constraintStart_toEndOf="@id/btn_skip_next"
+        app:layout_constraintBottom_toBottomOf="@id/btn_skip_previous"
+        android:layout_width="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_height="32dp"
+        android:src="@drawable/repeate"
+        android:id="@+id/btn_repeate"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

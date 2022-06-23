@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    android:backgroundTint="@color/white"
+    app:cardElevation="8dp"
+    android:id="@+id/audio_item"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_constrained_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:id="@+id/icon"
+            android:src="@drawable/music_icon"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:src="@drawable/delete"
+            android:layout_marginEnd="4dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:id="@+id/delete"
+            app:layout_constraintTop_toTopOf="@+id/icon"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/name_audio"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/name_music"
+            android:text="название"
+            android:layout_margin="6dp"
+            app:layout_constraintStart_toEndOf="@id/icon"
+            app:layout_constraintEnd_toStartOf="@id/delete"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/creator_audio"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:textColor="@color/artist_music"
+            android:text="исполнитель"
+            app:layout_constraintStart_toStartOf="@id/name_audio"
+            app:layout_constraintEnd_toEndOf="@id/name_audio"
+            app:layout_constraintTop_toBottomOf="@id/name_audio"/>
+
+            <FrameLayout
+                app:layout_constraintStart_toStartOf="@id/creator_audio"
+                app:layout_constraintTop_toBottomOf="@id/creator_audio"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/rating_panel" />
+            </FrameLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

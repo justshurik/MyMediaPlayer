@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvvm.view.activities.SettingsActivity">
+
+    <View
+        android:id="@+id/head_view_settings"
+        android:background="@color/purple_500"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:text="@string/settings_title"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="@id/head_view_settings"
+        app:layout_constraintTop_toTopOf="@id/head_view_settings"
+        app:layout_constraintBottom_toBottomOf="@id/head_view_settings"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_menu_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/title_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/params_search"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/head_view_settings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:id="@+id/block_search"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_settings">
+        <TextView
+            android:textAlignment="textEnd"
+            android:layout_weight="0.7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:paddingEnd="4dp"
+            android:text="@string/title_size"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/min_size"
+            android:layout_weight="0.5"
+            android:textColorHint="@color/purple_500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="14sp"
+            android:hint="@string/Mb"/>
+        <TextView
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/until"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/max_size"
+            android:layout_weight="0.5"
+            android:textColorHint="@color/purple_500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="14sp"
+            android:hint="@string/Mb"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_search_data"
+        app:layout_constraintTop_toBottomOf="@id/block_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:text="@string/title_button_save"/>
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_file_from_file"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/save_search_data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:text="@string/title_button_add"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/title_search_parameters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_sort_params"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/add_file_from_file"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+
+
+        <LinearLayout
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/title_search_parameters"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="horizontal">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/sort_by_rate"
+                        android:layout_weight="1"
+                        android:textSize="10sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rate_sort"/>
+
+                    <RadioButton
+                        android:id="@+id/sort_by_name"
+                        android:layout_weight="1"
+                        android:textSize="10sp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/name_sort"/>
+
+                    <RadioButton
+                        android:id="@+id/sort_by_artist"
+                        android:layout_weight="1"
+                        android:textSize="10sp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/artist_sort"/>
+
+                    <RadioButton
+                        android:id="@+id/sort_by_date"
+                        android:layout_weight="1"
+                        android:textSize="10sp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/date_sort"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
